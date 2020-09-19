@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: '72','poppins', sans-serif;
+}
+
+.bg {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: url("../img/background.jpg") no-repeat center fixed;
+    background-size: cover;
+    filter: blur(2px);
+}
+
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.login-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+    opacity: 0.9;
+}
+
+.login-content > .header {
+    background-color: #0854a0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 50px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.login-content > .icons {
+    margin-top: 20px;
+    height: 60px;
+    display: flex;
+    align-content: center;
+    align-content: center;
+}
+
+.login-content > .icons > img {
+    height: 30px;
+}
+
+.login-content > .icons > i {
+    height: 30px;
+    line-height: 30px;
+    margin:0 10px;
+}
+
+form {
+    width: 100%;
+}
+
+.content > .input-div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 15px 25px;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.content > .input-div > .i {
+    color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i i{
+    transition: .3s;
+    font-style: normal !important;
+    font-weight: bold;
+}
+
+.input-div.focus > .i > i{
+    color: #0854a0;
+}
+
+.input-div > div{
+    position: relative;
+    height: 45px;
+}
+
+.input-div > div > h5{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.input-div.focus > div > h5{
+    top: -5px;
+    font-size: 15px;
+}
+
+.input-div > div > input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.input-div.password{
+    margin-bottom: 4px;
+}
+
+.input-div:before, .input-div:after{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #0854a0;
+    transition: .4s;
+}
+
+.input-div:before{
+    right: 50%;
+}
+
+.input-div:after{
+    left: 50%;
+}
+
+.input-div.focus:before, .input-div.focus:after{
+    width: 50%;
+}
+
+.btn{
+    display: block;
+    width: calc(100% - 2rem);
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #0854a0, #0a6ed1, #0854a0);
+    background-size: 200%;
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 1.5rem 1rem 1rem 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn:hover{
+    background-position: right;
+}
+
+/*SAP ICON*/
+.account::before {
+    font-family: SAP-icons;
+    content: "\e001";
+}
+
+.key::before{
+    font-family: SAP-icons;
+    content: "\e20e"
+}
+
+.add::before {
+    font-family: SAP-icons;
+    content: "\e058";
+}
